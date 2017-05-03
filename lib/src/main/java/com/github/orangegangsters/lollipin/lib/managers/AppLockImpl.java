@@ -95,7 +95,7 @@ public class AppLockImpl<T extends AppLockActivity> extends AppLock implements L
     /**
      * Static instance of {@link AppLockImpl}
      */
-    private static AppLockImpl mInstance;
+    protected static AppLockImpl mInstance;
 
     /**
      * Static method that allows to get back the current static Instance of {@link AppLockImpl}
@@ -113,7 +113,7 @@ public class AppLockImpl<T extends AppLockActivity> extends AppLock implements L
         return mInstance;
     }
 
-    private AppLockImpl(Context context, Class<T> activityClass) {
+    public AppLockImpl(Context context, Class<T> activityClass) {
         super();
         this.mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
         this.mActivityClass = activityClass;
