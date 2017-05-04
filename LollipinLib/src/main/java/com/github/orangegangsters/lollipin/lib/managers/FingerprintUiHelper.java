@@ -59,7 +59,7 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
     /**
      * The timeout for the success to be displayed. Calls {@link Callback#onAuthenticated()} after this.
      */
-    private static final long SUCCESS_DELAY_MILLIS = 1300;
+    private static final long SUCCESS_DELAY_MILLIS = 800;
     /**
      * Alias for our key in the Android Key Store
      **/

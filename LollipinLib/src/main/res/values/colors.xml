@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="dark_grey_color">#4a636f</color>
+    <color name="green_color">#80C28F</color>
     <color name="light_blue_500">#03a9f4</color>
     <color name="blue_gray">#4b636f</color>
     <color name="light_gray">#f0f6f9</color>
@@ -9,5 +10,5 @@
 
     <color name="warning_color">#f4511e</color>
     <color name="hint_color">#42000000</color>
-    <color name="success_color">#009688</color>
+    <color name="success_color">@color/green_color</color>
 </resources>
