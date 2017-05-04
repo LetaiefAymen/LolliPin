@@ -16,11 +16,11 @@ public class LockManager<T extends AppLockActivity> {
     /**
      * The static singleton instance
      */
-    private static LockManager mInstance;
+    protected static LockManager mInstance;
     /**
      * The static singleton instance of {@link com.github.orangegangsters.lollipin.lib.managers.AppLock}
      */
-    private static AppLock mAppLocker;
+    protected static AppLock mAppLocker;
 
     /**
      * Used to retrieve the static instance

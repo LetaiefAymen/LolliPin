@@ -97,6 +97,8 @@ public class AppLockImpl<T extends AppLockActivity> extends AppLock implements L
      */
     protected static AppLockImpl mInstance;
 
+    private String lastClassName;
+
     /**
      * Static method that allows to get back the current static Instance of {@link AppLockImpl}
      *
@@ -377,6 +379,10 @@ public class AppLockImpl<T extends AppLockActivity> extends AppLock implements L
         }
 
         String clazzName = activity.getClass().getName();
+        if (lastClassName != null && lastClassName.equals(clazzName)) {
+          lastClassName = null;
+        }
+
         Log.d(TAG, "onActivityPaused " + clazzName);
 
         if ((onlyBackgroundTimeout() || !shouldLockSceen(activity)) && !(activity instanceof AppLockActivity)) {
@@ -392,6 +398,12 @@ public class AppLockImpl<T extends AppLockActivity> extends AppLock implements L
 
         String clazzName = activity.getClass().getName();
         Log.d(TAG, "onActivityResumed " + clazzName);
+        if(lastClassName!=null && lastClassName.equals(clazzName)) {
+          return;
+        }
+        else {
+          lastClassName = clazzName;
+        }
 
         if (shouldLockSceen(activity)) {
             Log.d(TAG, "mActivityClass.getClass() " + mActivityClass);
