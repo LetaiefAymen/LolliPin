@@ -145,7 +145,10 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
             mCancellationSignal = new CancellationSignal();
             mSelfCancelled = false;
             mFingerprintManager.authenticate(cryptoObject, mCancellationSignal, 0 /* flags */, this, null);
-            mIcon.setImageResource(R.drawable.ic_fp_40px);
+            mErrorTextView.setText(
+                mErrorTextView.getResources().getString(R.string.pin_code_fingerprint_text));
+            mIcon.setImageResource(R.drawable.ic_fingerprint_black_48dp);
+            mIcon.setAlpha(0.48f);
         }
     }
 
@@ -199,7 +202,8 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
     @Override
     public void onAuthenticationSucceeded(FingerprintManager.AuthenticationResult result) {
         mErrorTextView.removeCallbacks(mResetErrorTextRunnable);
-        mIcon.setImageResource(R.drawable.ic_fingerprint_success);
+      mIcon.setAlpha(1f);
+      mIcon.setImageResource(R.drawable.ic_fingerprint_success);
         mErrorTextView.setTextColor(
                 mErrorTextView.getResources().getColor(R.color.success_color, null));
         mErrorTextView.setText(
@@ -215,7 +219,7 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
     /**
      * Tells if the {@link FingerprintManager#isHardwareDetected()}, {@link FingerprintManager#hasEnrolledFingerprints()},
      * and {@link KeyguardManager#isDeviceSecure()}
-     * 
+     *
      * @return true if yes, false otherwise
      * @throws SecurityException If the hardware is not available, or the permission are not set
      */
@@ -282,7 +286,8 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
      * Show an error on the UI using {@link #mIcon} and {@link #mErrorTextView}
      */
     private void showError(CharSequence error) {
-        mIcon.setImageResource(R.drawable.ic_fingerprint_error);
+      mIcon.setAlpha(1f);
+      mIcon.setImageResource(R.drawable.ic_fingerprint_error);
         mErrorTextView.setText(error);
         mErrorTextView.setTextColor(
                 mErrorTextView.getResources().getColor(R.color.warning_color, null));
@@ -300,7 +305,8 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
                     mErrorTextView.getResources().getColor(R.color.hint_color, null));
             mErrorTextView.setText(
                     mErrorTextView.getResources().getString(R.string.pin_code_fingerprint_text));
-            mIcon.setImageResource(R.drawable.ic_fp_40px);
+            mIcon.setImageResource(R.drawable.ic_fingerprint_black_48dp);
+            mIcon.setAlpha(0.48f);
         }
     };
 

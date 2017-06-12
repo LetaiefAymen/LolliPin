@@ -368,7 +368,7 @@ public abstract class AppLockActivity extends PinActivity implements KeyboardBut
      * @return an {@link List<Integer>} of {@link AppLock} types which are backable
      */
     public List<Integer> getBackableTypes() {
-        return Arrays.asList(AppLock.CHANGE_PIN, AppLock.DISABLE_PINLOCK);
+        return Arrays.asList(AppLock.ENABLE_PINLOCK,AppLock.CHANGE_PIN, AppLock.DISABLE_PINLOCK);
     }
 
     /**

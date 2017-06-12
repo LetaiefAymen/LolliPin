@@ -7,7 +7,7 @@
   <string name="pin_code_step_unlock">Gib Dein %d-stelliges Passwort ein</string>
   <string name="pin_code_step_enable_confirm">Bestätige Dein %d-stelliges Passwort</string>
 
-  <string name="pin_code_fingerprint_text">Fingerabdruck</string>
+  <string name="pin_code_fingerprint_text">Entsperren mit Fingerabdruck</string>
   <string name="pin_code_fingerprint_success">Fingerabdruck erkannt</string>
-  <string name="pin_code_fingerprint_not_recognized">Fingerabdruck nicht erkannt. Bitte erneut versuchen.</string>
+  <string name="pin_code_fingerprint_not_recognized">Fingerabdruck nicht erkannt.\nBitte erneut versuchen.</string>
 </resources>
