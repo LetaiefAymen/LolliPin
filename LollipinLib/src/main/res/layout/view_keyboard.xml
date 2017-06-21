@@ -3,11 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    android:weightSum="4">
 
     <LinearLayout android:id="@+id/pin_code_first_row"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="horizontal"
         android:weightSum="3" >
 
@@ -36,7 +38,8 @@
 
     <LinearLayout android:id="@+id/pin_code_second_row"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="horizontal"
         android:layout_below="@+id/pin_code_first_row"
         android:weightSum="3">
@@ -66,7 +69,8 @@
 
     <LinearLayout android:id="@+id/pin_code_third_row"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="horizontal"
         android:layout_below="@+id/pin_code_second_row"
         android:weightSum="3">
@@ -96,7 +100,8 @@
 
     <LinearLayout android:id="@+id/pin_code_fourth_row"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="horizontal"
         android:layout_below="@+id/pin_code_third_row"
         android:weightSum="3">

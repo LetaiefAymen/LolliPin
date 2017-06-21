@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center_vertical"
-    android:paddingTop="@dimen/keyboard_button_padding"
-    android:paddingBottom="@dimen/keyboard_button_padding"
     app:rv_centered="true"
     app:rv_rippleDuration="@integer/ripple_effect_duration"
     app:rv_ripplePadding="@dimen/keyboard_button_ripple_padding"

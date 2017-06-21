@@ -20,7 +20,6 @@ import com.github.orangegangsters.lollipin.lib.interfaces.KeyboardButtonClickedL
  * Created by stoyan and oliviergoutay on 1/13/15.
  */
 public class KeyboardButtonView extends RelativeLayout implements RippleAnimationListener {
-
     private KeyboardButtonClickedListener mKeyboardButtonClickedListener;
 
     private Context mContext;
@@ -74,6 +73,14 @@ public class KeyboardButtonView extends RelativeLayout implements RippleAnimatio
                 }
             }
         }
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        int parentHeight = MeasureSpec.getSize(heightMeasureSpec);
+        mRippleView.setPadding(0,parentHeight/6,0,parentHeight/6);
+        mRippleView.requestLayout();
     }
 
     /**
