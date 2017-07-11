@@ -1,11 +1,11 @@
 <resources>
 
-  <string name="pin_code_forgot_text">Passwort vergessen?</string>
-  <string name="pin_code_step_disable">%d-stelliges Passwort deaktivieren</string>
-  <string name="pin_code_step_create">%d-stelliges Passwort erstellen</string>
-  <string name="pin_code_step_change">Gib Dein aktuelles %d-stelliges Passwort ein</string>
-  <string name="pin_code_step_unlock">Gib Dein %d-stelliges Passwort ein</string>
-  <string name="pin_code_step_enable_confirm">Bestätige Dein %d-stelliges Passwort</string>
+  <string name="pin_code_forgot_text">Pincode vergessen?</string>
+  <string name="pin_code_step_disable">%d-stelliges Pincode deaktivieren</string>
+  <string name="pin_code_step_create">%d-stelliges Pincode erstellen</string>
+  <string name="pin_code_step_change">Gib Dein aktuelles %d-stelliges Pincode ein</string>
+  <string name="pin_code_step_unlock">Gib Dein %d-stelliges Pincode ein</string>
+  <string name="pin_code_step_enable_confirm">Bestätige Dein %d-stelliges Pincode</string>
 
   <string name="pin_code_fingerprint_text">Entsperren mit Fingerabdruck</string>
   <string name="pin_code_fingerprint_success">Fingerabdruck erkannt</string>
